@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  location_id: 1
+  starts_at: 2008-07-19 15:25:17
+  ends_at: 2008-07-19 15:25:17
+  event_category_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  location_id: 1
+  starts_at: 2008-07-19 15:25:17
+  ends_at: 2008-07-19 15:25:17
+  event_category_id: 1
