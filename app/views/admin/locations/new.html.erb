@@ -1,6 +1,6 @@
-<h1>Editing location</h1>
+<% @page_title = 'New Location' %>
 
-<% form_for(@location) do |f| %>
+<% form_for([:admin, @location]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -32,9 +32,8 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Create" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @location %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Back', admin_locations_path %>

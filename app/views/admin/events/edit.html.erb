@@ -1,6 +1,6 @@
-<h1>Editing event</h1>
+<% @page_title = 'Edit Event' %>
 
-<% form_for(@event) do |f| %>
+<% form_for([:admin, @event]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -32,5 +32,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Show', admin_event_path(@event) %> |
+<%= link_to 'Back', admin_events_path %>

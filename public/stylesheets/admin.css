@@ -1,0 +1,195 @@
+/*--------------------------------------
+  Main
+---------------------------------------*/
+
+body {
+    margin: 0px;
+    padding:0;
+    color: #D6C691;
+    background-color: #D6C691;
+}
+
+body, a, p, table, ul, li {
+    font-family: Arial, Helvetica, san-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+a {
+    color: #3965AF;
+}
+
+a:hover {
+    color: #580099;
+}
+
+.leftColumn h1 {
+    color: #B12500;
+}
+
+.leftColumn h2 {
+    font-size: 14px;
+    border-style: none;
+    background-color: #fff;
+    color: #000;
+    margin: 0px;
+}
+
+.leftColumn ul {
+    margin: 0px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.tinted {
+    background-color: #eee;
+}
+
+.white {
+    background-color: #fff;
+}
+
+/*--------------------------------------
+  In-Page Nav Bar
+---------------------------------------*/
+.linklist {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    display: inline;
+}
+
+.linklist li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 15px;
+}
+
+.linklist li.name {
+    font-weight: bold;
+}
+
+
+.email, .mainContent {
+    border: 1px dashed #000000;
+    background: #ffffff;
+    padding: 0px 20px 20px 20px;
+}
+
+.mainContent {
+    margin: 20px 20px 20px 220px;
+    color: #333333;
+}
+
+.email {
+    margin: 20px 20px 20px 20px;
+}
+
+
+/*--------------------------------------
+  Menu
+---------------------------------------*/
+
+.leftColumn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    border: 1px dashed #000000;
+    background-color: #fff;
+    color: #fff;
+    margin: 0px;
+    padding: 0px 15px 15px 15px;
+    height: 400px;
+}
+
+.leftColumn h1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.leftColumn ul {
+	margin-bottom: 10px;
+}
+
+.menuGroup {
+    width: 100%;
+    margin: 5px 5px 15px 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.menuGroup h2 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px;
+    background-color: #FF9900;
+    color: #fff;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: black;
+}
+
+.menuGroup ul {
+    margin: 0px 0px 5px 5px;
+}
+
+.menuGroup li {
+    list-style-type: none;
+    margin: 0px 0px 5px 5px;
+}
+
+
+/*--------------------------------------
+  Validation Errors
+---------------------------------------*/
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: inline;
+}
+
+.fieldWithErrors input, .fieldWithErrors select, .fieldWithErrors textarea {
+    background-color: #ffdfdf;
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+
+
+

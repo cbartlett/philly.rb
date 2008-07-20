@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<% @page_title = 'Listing Events' %>
 
 <table>
   <tr>
@@ -18,13 +18,13 @@
     <td><%=h event.starts_at %></td>
     <td><%=h event.ends_at %></td>
     <td><%=h event.event_category_id %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_event_path(event) %></td>
+    <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+    <td><%= link_to 'Destroy', admin_event_path(event), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New event', new_event_path %>
+<%= link_to 'New event', new_admin_event_path %>

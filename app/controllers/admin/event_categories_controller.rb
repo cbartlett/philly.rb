@@ -1,4 +1,4 @@
-class EventCategoriesController < ApplicationController
+class Admin::EventCategoriesController < AdministrativeController
   # GET /event_categories
   # GET /event_categories.xml
   def index
@@ -45,7 +45,7 @@ class EventCategoriesController < ApplicationController
     respond_to do |format|
       if @event_category.save
         flash[:notice] = 'EventCategory was successfully created.'
-        format.html { redirect_to(@event_category) }
+        format.html { redirect_to(admin_event_category_path(@event_category)) }
         format.xml  { render :xml => @event_category, :status => :created, :location => @event_category }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class EventCategoriesController < ApplicationController
     respond_to do |format|
       if @event_category.update_attributes(params[:event_category])
         flash[:notice] = 'EventCategory was successfully updated.'
-        format.html { redirect_to(@event_category) }
+        format.html { redirect_to(admin_event_category_path(@event_category)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class EventCategoriesController < ApplicationController
     @event_category.destroy
 
     respond_to do |format|
-      format.html { redirect_to(event_categories_url) }
+      format.html { redirect_to(admin_event_categories_url) }
       format.xml  { head :ok }
     end
   end
