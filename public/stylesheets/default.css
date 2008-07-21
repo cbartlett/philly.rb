@@ -131,10 +131,15 @@ a:hover {
 	color: #FFFFFF;
 }
 
-#menu a:hover, #menu .active a {
+#menu a:hover, #menu .active a,
+#page_index #home_button a,
+#events_index #events_button a,
+#page_resources #resources_button a, 
+#page_jobs #jobs_button a {
 	background-image: url(/images/img03.gif);
 	color: #AA2808;
 }
+
 
 /* Page */
 

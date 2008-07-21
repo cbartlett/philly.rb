@@ -1,0 +1,8 @@
+<h1>Upcoming Events</h1>
+
+<% @events.each do |event| %>
+	<% div_for(event) do %>
+		<h2><%= event.starts_at.to_s(:nice) %></h2>
+		<%= event.name %>
+	<% end %>
+<% end %>

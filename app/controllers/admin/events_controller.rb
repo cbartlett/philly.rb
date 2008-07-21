@@ -24,6 +24,7 @@ class Admin::EventsController < AdministrativeController
   # GET /events/new
   # GET /events/new.xml
   def new
+    setup_variables
     @event = Event.new
 
     respond_to do |format|
@@ -34,12 +35,14 @@ class Admin::EventsController < AdministrativeController
 
   # GET /events/1/edit
   def edit
+    setup_variables
     @event = Event.find(params[:id])
   end
 
   # POST /events
   # POST /events.xml
   def create
+    setup_variables
     @event = Event.new(params[:event])
 
     respond_to do |format|
@@ -57,6 +60,7 @@ class Admin::EventsController < AdministrativeController
   # PUT /events/1
   # PUT /events/1.xml
   def update
+    setup_variables
     @event = Event.find(params[:id])
 
     respond_to do |format|
@@ -82,4 +86,11 @@ class Admin::EventsController < AdministrativeController
       format.xml  { head :ok }
     end
   end
+  
+  private
+    
+    def setup_variables
+      @locations = Location.find(:all).map {|l| [l.name, l.id]}
+      @categories = EventCategory.find(:all).map {|c| [c.name, c.id]}
+    end
 end

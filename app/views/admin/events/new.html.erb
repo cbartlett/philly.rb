@@ -13,7 +13,7 @@
   </p>
   <p>
     <%= f.label :location_id %><br />
-    <%= f.text_field :location_id %>
+    <%= f.select :location_id, @locations %>
   </p>
   <p>
     <%= f.label :starts_at %><br />
@@ -25,7 +25,7 @@
   </p>
   <p>
     <%= f.label :event_category_id %><br />
-    <%= f.text_field :event_category_id %>
+    <%= f.select :event_category_id, @categories %>
   </p>
   <p>
     <%= f.submit "Create" %>

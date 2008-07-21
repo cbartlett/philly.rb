@@ -16,7 +16,7 @@ Description: A two-column fixed-width template suitable for small websites.
 <title>Philly on Rails: Philadelphia area Ruby user group</title>
 <%= stylesheet_link_tag 'default' %>
 </head>
-<body>
+<body id="<%= action_body_id %>">
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
@@ -26,10 +26,10 @@ Description: A two-column fixed-width template suitable for small websites.
 		<!-- end div#logo -->
 		<div id="menu">
 			<ul>
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Resources</a></li>
-				<li><a href="#">Jobs</a></li>
+				<li id="home_button"><%= link_to 'Home', '/' %></li>
+				<li id="events_button"><%= link_to 'Events', events_path %></li>
+				<li id="resources_button"><%= link_to 'Resources', :controller => 'page', :action => 'resources' %></li>
+				<li id="jobs_button"><%= link_to 'Jobs', :controller => 'page', :action => 'jobs' %></li>
 			</ul>
 		</div>
 		<!-- end div#menu -->
@@ -37,59 +37,25 @@ Description: A two-column fixed-width template suitable for small websites.
 	<!-- end div#header -->
 	<div id="page">
 		<div id="content">
-			<div id="welcome">
-				<h1>Ruby and Rails are thriving in Philadelphia!</h1>
-				<p><strong>Philly on Rails</strong> is the one and only user group in the Philadelphia area dedicated
-					to helping Ruby enthusiasts learn, network, and socialize.</p>
-			</div>
-			<div id="business_meetings">
-				<h2>Business Meetings</h2>
-				<p>Our group meets occasionally (about once every other month) to have educational meetings where
-					members speak about Ruby-related topics. These are a wonderful resource for gaining in-depth
-					knowledge about what's current and hot in the world of Ruby and Ruby on Rails.
-					Past topics have included:</p>
-				<ul>
-					<li>Introduction to JQuery</li>
-					<li>Handling email with Rails</li>
-					<li>The Git version control system</li>
-					<li>Rails deployment</li>
-					<li>Credit card validation and processing</li>
-					<li>Enterprise adoption of Ruby</li>
-					<li>JRuby</li>
-					<li>Rails Globalize plugin</li>
-				</ul>
-			</div>
-			<div id="Pub Nights">
-				<h2>Pub Nights</h2>
-				<p>We also hold regular Pub Nights -- informal gatherings at watering holes throughout the Delaware Valley.
-					These are casual get-togethers over food and drink to chat about whatever. Past locations have included
-					Center City Philadelphia and Phoenixville, PA. These are a great opportunity to network and relax with
-					other Rubyists.</p>
-			</div>
+			<%= yield %>
 		</div>
 		<!-- end div#content -->
 		<div id="sidebar">
 			<ul>
 				<li id="news">
-					<h2>Upcoming Events</h2>
+					<% @categories.each do |category| %>
+					<h2>Next <%= category.name %>:</h2>
 					<ul>
 						<li>
-							<h3>25th May</h3>
-							<p><a href="#">Pellentesque quis elit non lectus gravida blandit&hellip;</a></p>
-						</li>
-						<li>
-							<h3>23rd May</h3>
-							<p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing&hellip;</a></p>
-						</li>
-						<li>
-							<h3>21st May</h3>
-							<p><a href="#">Phasellus nec erat sit amet nibh pellentesque congue&hellip;</a></p>
-						</li>
-						<li>
-							<h3>17th May</h3>
-							<p><a href="#">Maecenas vitae orci vitae tellus feugiat eleifend&hellip;</a></p>
-						</li>
+							<% if category.upcoming_event %>
+								<h3><%= category.upcoming_event.starts_at %></h3>
+								<p><%= link_to(category.upcoming_event.name, event_path(category.upcoming_event)) %></p>
+							<% else %>
+								<p><em>None scheduled.</em></p>
+							<% end %>
+						</li>					
 					</ul>
+					<% end %>
 				</li>
 				<li id="submenu">
 					<h2>Helpful Links</h2>
