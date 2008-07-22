@@ -33,3 +33,11 @@ describe "Event#upcoming" do
     Event.upcoming.size.should eql(1)
   end
 end
+
+describe "Event#to_ical" do
+  it "should have an ical event output" do
+    event = Event.new(valid_event_attributes)
+    event.location = Location.new(valid_location_attributes)
+    event.to_ical.class.should eql(Icalendar::Event)
+  end
+end

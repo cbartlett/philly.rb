@@ -69,3 +69,5 @@ end
 module ActiveSupport::CoreExtensions::Time::Conversions
   DATE_FORMATS[:nice] = "%m/%d/%Y %I:%M %p"
 end
+
+require 'icalendar-1.0.2/lib/icalendar'
