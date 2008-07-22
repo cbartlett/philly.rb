@@ -27,10 +27,11 @@ describe Event do
 end
 
 describe "Event#upcoming" do
-  it "should return only upcoming events" do
-    Event.create(valid_event_attributes(:starts_at => Time.now+1000))
-    Event.create(valid_event_attributes(:starts_at => Time.now-1000))
-    Event.upcoming.size.should eql(1)
+  it "should return only events that haven't ended" do
+    Event.create(valid_event_attributes(:starts_at => Time.now+1000, :ends_at => Time.now+2000)) # hasn't started, should show
+    Event.create(valid_event_attributes(:starts_at => Time.now-1000, :ends_at => Time.now+1000)) # started, not over, should show
+    Event.create(valid_event_attributes(:starts_at => Time.now-1000, :ends_at => Time.now-500))  # over, shouldn't show
+    Event.upcoming.size.should eql(2)
   end
 end
 
