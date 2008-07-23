@@ -273,6 +273,10 @@ a:hover {
 	font-size: 85%;
 }
 
+#news ul {
+	margin-bottom: 20px;
+}
+
 /* Footer */
 
 #footer {
@@ -297,4 +301,17 @@ a:hover {
 
 #footer a:hover {
 	text-decoration: none;
+}
+
+/* Events */
+#content .event {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted;
+}
+#content .event h2 {
+	margin-bottom: 0px;
+}
+#content .event p {
+	margin-bottom: 10px;
 }

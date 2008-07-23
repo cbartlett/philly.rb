@@ -42,7 +42,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 					<ul>
 						<li>
 							<% if category.upcoming_event %>
-								<h3><%= category.upcoming_event.starts_at %></h3>
+								<h3><%= time_range(category.upcoming_event.starts_at, category.upcoming_event.ends_at) %></h3>
 								<p><%= link_to(category.upcoming_event.name, event_path(category.upcoming_event)) %></p>
 							<% else %>
 								<p><em>None scheduled.</em></p>
