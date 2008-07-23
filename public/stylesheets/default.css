@@ -220,7 +220,7 @@ a:hover {
 
 #sidebar li {
 	margin-bottom: 1px;
-	padding: 20px 0;
+	padding: 0 0 20px 0;
 }
 
 #sidebar li ul {
@@ -314,4 +314,15 @@ a:hover {
 }
 #content .event p {
 	margin-bottom: 10px;
+}
+#signup p {
+	margin: 10px 0 10px 0;
+	font-size: 77%;
+}
+#signup label {
+	color: #fff;
+}
+
+#contact {
+	margin-top: 50px;
 }
