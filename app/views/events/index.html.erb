@@ -3,14 +3,9 @@
 <% @events.each do |event| %>
 	<% div_for(event) do %>
 		<h2><%= time_range(event.starts_at, event.ends_at) %></h2>
-		<p><%= h event.name %></p>
-		<p><%= textilize event.description %></p>
 		<p>
 			<%= h event.location.name %><br />
-			<%= h event.location.address_1 %><br />
-			<%= h(event.location.address_2) + '<br />' if event.location.address_2 %>
-			<%= h event.location.city %>, <%= h event.location.state %> <%= h event.location.zip %>
+			<%= link_to(h(event.name+'...'), event_path(event)) %>
 		</p>
-		<p><em><%= textilize event.location.description %></em></p>
 	<% end %>
 <% end %>
