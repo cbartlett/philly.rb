@@ -23,3 +23,4 @@ beta:
   database: phillyonrails_beta
   username: phillyonrails
   password: c7E0Fl
+  socket: /var/run/mysqld/mysqld.sock
