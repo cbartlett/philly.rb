@@ -15,7 +15,7 @@ test:
 
 production:
   adapter: mysql
-  database: phillyonrails_production
+  database: phillyonrails
   username: phillyonrails
   password: c7E0Fl
 
