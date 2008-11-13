@@ -13,7 +13,6 @@ set :repository,  "git@github.com:cbartlett/phillyonrails.org.git"
 
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
-set :branch, "origin/master"
 
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
