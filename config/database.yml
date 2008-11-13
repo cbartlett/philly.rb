@@ -13,10 +13,11 @@ test:
   database: db/test.sqlite3
   timeout: 5000
 
-production:
+beta:
   adapter: mysql
-  database: db/production.sqlite3
-  timeout: 5000
+  database: phillyonrails_production
+  username: phillyonrails
+  password: c7E0Fl
 
 beta:
   adapter: mysql
