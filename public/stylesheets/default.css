@@ -326,3 +326,8 @@ a:hover {
 #contact {
 	margin-top: 50px;
 }
+
+#poll div.narrow {
+	margin: 10px auto; 
+	width: 150px;
+}
