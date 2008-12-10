@@ -1,10 +1,10 @@
 production:
   protect_admin_site: true
-  username: phillyonrails
+  username: phillyrb
   password: geeksnbeers
 beta:
   protect_admin_site: true
-  username: phillyonrails
+  username: phillyrb
   password: geeksnbeers
 development:
   protect_admin_site: false
