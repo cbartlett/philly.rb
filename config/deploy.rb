@@ -9,7 +9,7 @@ role :db, "nolan.kineticweb.com", :primary => true
 set :scm, :git
 set :user, 'phillyonrails'
 set :application, "phillyonrails"
-set :repository,  "git@github.com:cbartlett/phillyonrails.org.git"
+set :repository,  "git@github.com:cbartlett/philly.rb.git"
 
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
