@@ -239,6 +239,16 @@ a:hover {
 	color: #D4C792;
 }
 
+#sidebar h2.ical {
+  border: none;
+}
+
+#sidebar h2.ical a {
+  text-decoration: none;
+  padding-left: 20px;
+  background: url(/images/subscribe.png) no-repeat;
+}
+
 #sidebar h3 {
 	font-size: 77%;
 	color: #D4C792;

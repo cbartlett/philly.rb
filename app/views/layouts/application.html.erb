@@ -37,6 +37,9 @@ Released for free under a Creative Commons Attribution 2.5 License
 		<div id="sidebar">
 			<ul>
 				<li id="news">
+				  <h2 class="ical"><%= link_to 'iCal event feed', 
+				                       :controller => 'events', :format => 'ics', 
+				                       :protocol => 'webcal', :only_path => false %></h2>
 					<% @categories.each do |category| %>
 					<h2>Next <%= category.name %>:</h2>
 					<ul>
