@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
     event             = Icalendar::Event.new
     event.start       = starts_at.to_datetime
     event.end         = ends_at.to_datetime
-    event.summary     = "Philly on Rails: #{name}"
+    event.summary     = "Philly.rb: #{name}"
     event.description = description
     event.location    = location.name
     return event
