@@ -87,7 +87,7 @@ a:hover {
 	margin: -5px 0 0 0;
 	padding: 0;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px; /* From walter davis */
 	font-size: 10px;
 	font-weight: bold;
 	color: #D4C792;
