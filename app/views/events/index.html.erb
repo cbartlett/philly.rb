@@ -1,4 +1,3 @@
-<h1>Upcoming Events</h1>
 
 <% @events.each do |event| %>
 	<% div_for(event) do %>
@@ -8,4 +7,9 @@
 			<%= link_to(h(event.name+'...'), event_path(event)) %>
 		</p>
 	<% end %>
+<% end %>
+<% if @events.empty? %>
+  <div class="fullWidth">
+    No upcoming events yet. Keep an eye on our <%= link_to 'twitter feed', twitter %> or <%= link_to 'mailing list', google_groups %> to get all the latest information.
+  </div>
 <% end %>

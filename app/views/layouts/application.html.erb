@@ -1,89 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Philly.rb: Philadelphia area Ruby user group</title>
+<%= stylesheet_link_tag 'http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css' %>
 <%= stylesheet_link_tag 'default' %>
 </head>
 <body id="<%= action_body_id %>">
 <div id="wrapper">
-	<div id="header">
-		<div id="logo">
-			<h1><a href="/">Philly.rb</a></h1>
-			<h2>Philadelphia Ruby user group</h2>
-		</div>
-		<!-- end div#logo -->
-		<div id="menu">
-			<ul>
-				<li id="home_button"><%= link_to 'Home', '/' %></li>
-				<li id="events_button"><%= link_to 'Events', events_path %></li>
-				<li id="resources_button"><%= link_to 'Resources', :controller => 'page', :action => 'resources' %></li>
-				<li id="jobs_button"><%= link_to 'Jobs', :controller => 'page', :action => 'jobs' %></li>
-			</ul>
-		</div>
-		<!-- end div#menu -->
-	</div>
-	<!-- end div#header -->
-	<div id="page">
-		<div id="content">
-			<%= yield %>
-		</div>
-		<!-- end div#content -->
-		<div id="sidebar">
-			<ul>
-				<li id="news">
-				  <h2 class="ical"><%= link_to 'iCal event feed', 
-				                       :controller => 'events', :format => 'ics', 
-				                       :protocol => 'webcal', :only_path => false %></h2>
-					<% @categories.each do |category| %>
-					<h2>Next <%= category.name %>:</h2>
-					<ul>
-						<li>
-							<% if category.upcoming_event %>
-								<h3><%= time_range(category.upcoming_event.starts_at, category.upcoming_event.ends_at) %></h3>
-								<p><%= link_to(category.upcoming_event.name, event_path(category.upcoming_event)) %></p>
-							<% else %>
-								<p><em>None scheduled.</em></p>
-							<% end %>
-						</li>					
-					</ul>
-					<% end %>
-				</li>
+  <div id="page">
+    <div id="header">
+      <div id="logo">
+        <%= image_tag 'logo.png' %>
+      </div>
+      <div id="menu">
+        <ul>
+          <li class="events"><%= link_to 'Events', events_path %></li>
+          <li class="jobs"><%= link_to 'Jobs', :controller => 'page', :action => 'jobs' %></li>
+          <li><a href="http://groups.google.com/group/phillyrb/subscribe">Join Philly.rb!</a></li>
+        </ul>
+      </div>
+      <h1>Philly.rb <span>Philadelphia Ruby User Group</span></h1>
+    </div>
 
-				<li id="signup">
-					<h2>Discussion List</h2>
-					<p><a href="http://groups.google.com/group/phillyrb">Join the mailing list</a> for lively (but low-traffic) discussion about,
-						 Ruby, Rails, and group happenings.</p>
-				</li>
-        <!-- <li id="poll">
-          <h2>Community Polls</h2>
-          <div class="narrow">
-          </div>
-        </li> -->
-				<li id="contact">
-					<p>
-						For questions, sponsorship opportunities, comments, concerns,
-						media inquiries, or anything else, please email:<br />
-						<a href="mailto:organizers@phillyrb.org">organizers@phillyrb.org</a>
-					</p>
-				</li>
-			</ul>
-		</div>
-		<!-- end div#sidebar -->
-		<div style="clear: both; height: 1px"></div>
-	</div>
-	<!-- end div#page -->
-	<div id="footer">
-		<p id="legal">Copyright &copy; <%= Time.now.year %> Philly.rb. All Rights Reserved. Design from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
-		<p>This site was created by Philly.rb member volunteers and is hosted by <a href="http://www.kineticweb.com">Kinetic Web Solutions</a>.</p>
-	</div>
-	<!-- end div#footer -->
+    <div id="news">
+      <ul id="twitter_update_list">
+        <li>News from <%= link_to '@philly.rb', twitter %>...</li>
+      </ul>
+    </div>
+    
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div class="clear">&nbsp;</div>
+  </div>
+  
+  <div id="footer">
+    <p id="legal">Copyright &copy; <%= Time.now.year %> Philly.rb. All Rights Reserved.</p>
+    <p>This site was created by Philly.rb members and is hosted by <a href="http://www.kineticweb.com">Kinetic Web Solutions</a>.</p>
+  </div>
 </div>
-<!-- end div#wrapper -->
+<%= javascript_include_tag 'jquery-1.4.min', 'twitter.js', :cache => 'app' %>
+<%= javascript_include_tag "http://twitter.com/statuses/user_timeline/#{twitter_name}.json?callback=updateTweets&count=6" %>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'page'
+  map.root :controller => 'events', :action => 'index'
 
   map.resources :locations
   map.resources :event_categories
