@@ -33,13 +33,13 @@ body {
 }
 
 #logo, #news {
-  background: rgba(0,0,0,0.5);
+  background: #571617;
   padding: 10px 10px 8px 10px;
   border-radius: 5px;
   float: left;
   margin-right: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.6);
-  border-right: 1px solid rgba(0,0,0,0.6);
+  border-bottom: 1px solid #220809;
+  border-right: 1px solid #220809;
 }
 
 h1 {
