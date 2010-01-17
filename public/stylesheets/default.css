@@ -95,7 +95,7 @@ h1 span {
 #news {
   width: 250px;
   float: right;
-  margin-right: 20px;
+  margin: 0 20px 10px 0;
 }
 
 #news > p {
@@ -191,4 +191,5 @@ h1 span {
 
 .clear {
   clear: both;
+  height: 0;
 }
