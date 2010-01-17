@@ -2,3 +2,5 @@ log/*.log
 .DS_Store
 db/schema.rb
 db/*.sqlite3
+tmp
+public/javascripts/app.js
