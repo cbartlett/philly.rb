@@ -17,7 +17,7 @@
         <ul>
           <li class="events"><%= link_to 'Events', events_path %></li>
           <li class="jobs"><%= link_to 'Jobs', :controller => 'page', :action => 'jobs' %></li>
-          <li><a href="http://groups.google.com/group/phillyrb/subscribe">Join Philly.rb!</a></li>
+          <li><%= link_to "Join Philly.rb!", "#{google_groups}/subscribe" %></li>
         </ul>
       </div>
       <h1>Philly.rb <span>Philadelphia Ruby User Group</span></h1>
