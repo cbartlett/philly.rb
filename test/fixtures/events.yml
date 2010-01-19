@@ -4,14 +4,23 @@ one:
   name: MyString
   description: MyText
   location_id: 1
-  starts_at: 2008-07-19 15:25:17
-  ends_at: 2008-07-19 15:25:17
+  starts_at: <%= 1.hour.ago %>
+  ends_at: <%= 2.hours.from_now %>
   event_category_id: 1
 
 two:
   name: MyString
   description: MyText
   location_id: 1
-  starts_at: 2008-07-19 15:25:17
-  ends_at: 2008-07-19 15:25:17
+  starts_at: <%= 2.days.from_now %>
+  ends_at: <%= 3.days.from_now %>
   event_category_id: 1
+
+three:
+  name: MyString
+  description: MyText
+  location_id: 1
+  starts_at: <%= 3.days.from_now %>
+  ends_at: <%= 4.days.from_now %>
+  event_category_id: 1
+  

@@ -1,6 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   name: MyString
   address_1: MyString
   address_1: MyString
@@ -10,6 +11,7 @@ one:
   description: MyText
 
 two:
+  id: 2
   name: MyString
   address_1: MyString
   address_1: MyString
