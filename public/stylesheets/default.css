@@ -86,8 +86,8 @@ h1 span {
 }
 
 #menu a:hover,
-.events #menu li.events a,
-.jobs #menu li.jobs a {
+#events_index #menu li.events_index a,
+#page_jobs #menu li.page_jobs a {
   color: white;
   background: #72B2B4;
 }
