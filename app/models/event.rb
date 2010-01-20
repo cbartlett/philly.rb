@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
   belongs_to :location
 
   def self.upcoming
-    find(:all, :conditions => ['ends_at > ?', Time.now.utc], :order => 'starts_at')
+    find(:all, :conditions => ['ends_at > ?', Time.now.utc], :order => 'starts_at', :limit => 2)
   end
 
   def to_ical
