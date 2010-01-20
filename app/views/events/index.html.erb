@@ -13,3 +13,9 @@
     No upcoming events yet. Keep an eye on our <%= link_to 'twitter feed', twitter %> or <%= link_to 'mailing list', google_groups %> to get all the latest information.
   </div>
 <% end %>
+
+<% content_for :back_matter do %>
+  <div id="blurbs">
+    <%= render :partial => 'page/blurb' %>
+  </div>
+<% end %>
