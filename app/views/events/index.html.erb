@@ -1,11 +1,11 @@
 
 <% @events.each do |event| %>
 	<% div_for(event) do %>
-		<h2><%= time_range(event.starts_at, event.ends_at) %></h2>
-		<p>
-			<%= h event.location.name %><br />
-			<%= link_to(h(event.name+'...'), event_path(event)) %>
-		</p>
+    <h3>Presentation</h3>
+    <p>None scheduled</p>
+    <a href="http://maps.google.com/maps?q=3730+Walnut+St+Philadelphia+PA">
+      <img src="http://maps.google.com/maps/api/staticmap?markers=color:red|label:A|3730+Walnut+St+Philadelphia+PA&amp;zoom=16&amp;size=240x200&amp;sensor=false&amp;key=ABQIAAAArY34WV9NiqAqdb5t6Rjb4xSuJMslPtnuZYULNWgvm9S-92hLTRSaSBMqRfSjHARzuvpMQaPV3oYccw" />
+    </a>
 	<% end %>
 <% end %>
 <% if @events.empty? %>

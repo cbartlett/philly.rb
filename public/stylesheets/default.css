@@ -177,6 +177,7 @@ h1 span {
   float: left;
   width: 255px;
   margin: 0 10px 10px 0;
+  text-align: center;
 }
 
 .event img {
