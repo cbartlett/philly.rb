@@ -152,16 +152,19 @@ h1 span {
   background: url('ical.png') 0 0 no-repeat;
 }
 
-#content, .event {
+#content, .event, .fullWidth {
   background: white;
   border-radius: 3px;  
   color: black;
 }
 
+#content, .fullWidth, .event {
+  padding: 10px;
+}
+
 #content {
   width: 550px;
   margin: 0 0 10px 20px;
-  padding: 10px;
 }
 
 #events_index #content {
@@ -174,7 +177,6 @@ h1 span {
   float: left;
   width: 255px;
   margin: 0 10px 10px 0;
-  padding: 10px;
 }
 
 .event img {
