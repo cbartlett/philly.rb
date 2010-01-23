@@ -1,26 +1,26 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
+  name: PubNite In Progress
+  description: Party in session
   location_id: 1
   starts_at: <%= 1.hour.ago %>
   ends_at: <%= 2.hours.from_now %>
   event_category_id: 1
 
 two:
-  name: MyString
-  description: MyText
-  location_id: 1
+  name: Upcoming Presentation
+  description: All Randy, all the time.
+  location_id: 2
   starts_at: <%= 2.days.from_now %>
   ends_at: <%= 3.days.from_now %>
-  event_category_id: 1
+  event_category_id: 2
 
 three:
-  name: MyString
-  description: MyText
-  location_id: 1
+  name: Future Presentation
+  description: Probably some Randy again.
+  location_id: 2
   starts_at: <%= 3.days.from_now %>
   ends_at: <%= 4.days.from_now %>
-  event_category_id: 1
+  event_category_id: 2
   

@@ -1,21 +1,24 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+flannerys:
   id: 1
-  name: MyString
-  address_1: MyString
-  address_1: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  description: MyText
+  name: T.A. Flannery's Saloon
+  address_1: 11 South 21st Street
+  address_2: (21st and Ludlow)
+  city: Philadelphia
+  state: PA
+  zip: 19103
+  map_url: http://maps.google.com/maps?q=11+S+21st+St+Philadelphia+PA
+  image_url: http://maps.google.com/maps/api/staticmap?markers=color:red|label:B|11+S+21st+St+Philadelphia+PA&zoom=16
+  description: Street parking in a 3 or 4 block radius around that area seems pretty open around that time so hopefully it shouldn't be too hard to find a spot. SEPTA is close by, too.
 
-two:
+huntsman:
   id: 2
-  name: MyString
-  address_1: MyString
-  address_1: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  description: MyText
+  name: Wharton's Huntsman Hall
+  address_1: 3730 Walnut Street
+  city: Philadelphia
+  state: PA
+  zip: 19104
+  map_url: http://maps.google.com/maps?q=3730+Walnut+St+Philadelphia+PA
+  image_url: http://maps.google.com/maps/api/staticmap?markers=color:red|label:A|3730+Walnut+St+Philadelphia+PA&zoom=16
+  description: For map and directions go to http://www.wharton.upenn.edu/campus/philadelphia/visiting.cfm
