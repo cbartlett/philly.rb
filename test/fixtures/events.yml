@@ -1,5 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
+zero:
+  name: Prevoius PubNite
+  description: Party done gone
+  location_id: 1
+  starts_at: <%= 3.hours.ago %>
+  ends_at: <%= 1.hour.ago %>
+  event_category_id: 1
+
 one:
   name: PubNite In Progress
   description: Party in session
