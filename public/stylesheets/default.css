@@ -156,9 +156,6 @@ h1 span {
   background: white;
   border-radius: 3px;  
   color: black;
-}
-
-#content, .fullWidth, .event {
   padding: 10px;
 }
 
@@ -173,11 +170,26 @@ h1 span {
   width: 570px;
 }
 
-.event {
+#events_index .event {
   float: left;
   width: 255px;
   margin: 0 10px 10px 0;
   text-align: center;
+}
+
+.title a {
+  color: black;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.address a {
+  color: black;
+  text-decoration: none;
+}
+
+.address a:hover {
+  text-decoration: underline;
 }
 
 .event img {

@@ -1,7 +1,12 @@
 
 <% @events.each do |event| %>
 	<% div_for(event) do %>
-    <h3><%=h(event.name)%></h3>
+    <p class="title"><%= link_to event.name, event_path(event) %></p>
+    <p><%= event.starts_at.to_s(:event) %></p>
+	<p class="address"><a href="<%=h(event.location.map_url)%>">
+		<%= h event.location.name %><br />
+		<%= h event.location.city %>, <%= h event.location.state %> <%= h event.location.zip %>
+	</a></p>
     <a href="<%=h(event.location.map_url)%>">
       <img src="<%=gmap(event.location.image_url)%>" />
     </a>
