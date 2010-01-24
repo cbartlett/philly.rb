@@ -4,31 +4,31 @@ zero:
   name: Prevoius PubNite
   description: Party done gone
   location_id: 1
-  starts_at: <%= 3.hours.ago %>
-  ends_at: <%= 1.hour.ago %>
+  starts_at: <%= 3.hours.ago.utc.to_s(:db) %>
+  ends_at: <%= 1.hour.ago.utc.to_s(:db) %>
   event_category_id: 1
 
 one:
   name: PubNite In Progress
   description: Party in session
   location_id: 1
-  starts_at: <%= 1.hour.ago %>
-  ends_at: <%= 2.hours.from_now %>
+  starts_at: <%= 1.hour.ago.utc.to_s(:db) %>
+  ends_at: <%= 2.hours.from_now.utc.to_s(:db) %>
   event_category_id: 1
 
 two:
   name: Upcoming Presentation
   description: All Randy, all the time.
   location_id: 2
-  starts_at: <%= 2.days.from_now %>
-  ends_at: <%= 3.days.from_now %>
+  starts_at: <%= 2.days.from_now.utc.to_s(:db) %>
+  ends_at: <%= 3.days.from_now.utc.to_s(:db) %>
   event_category_id: 2
 
 three:
   name: Future Presentation
   description: Probably some Randy again.
   location_id: 2
-  starts_at: <%= 3.days.from_now %>
-  ends_at: <%= 4.days.from_now %>
+  starts_at: <%= 3.days.from_now.utc.to_s(:db) %>
+  ends_at: <%= 4.days.from_now.utc.to_s(:db) %>
   event_category_id: 2
   
