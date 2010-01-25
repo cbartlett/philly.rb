@@ -188,12 +188,8 @@ h1 span {
   text-decoration: none;
 }
 
-.address a:hover {
-  text-decoration: underline;
-}
-
 .event img {
-  border: 1px solid #333;
+  border: 1px solid #72B2B4;
   display: block;
   margin: 5px auto;
 }
