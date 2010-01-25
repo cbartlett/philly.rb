@@ -7,11 +7,10 @@
 		<%= h event.location.name %><br />
 		<%= h event.location.city %>, <%= h event.location.state %> <%= h event.location.zip %>
 	</a></p>
-    <a href="<%=h(event.location.map_url)%>">
-      <img src="<%=gmap(event.location.image_url)%>" />
-    </a>
+    <%= link_to image_tag(event.location.image_url), event.location.map_url %>
 	<% end %>
 <% end %>
+
 <% if @events.empty? %>
   <div class="fullWidth">
     No upcoming events yet. Keep an eye on our <%= link_to 'twitter feed', twitter %> or <%= link_to 'mailing list', google_groups %> to get all the latest information.
