@@ -8,9 +8,8 @@ flannerys:
   city: Philadelphia
   state: PA
   zip: 19103
-  map_url: http://maps.google.com/maps?q=11+S+21st+St+Philadelphia+PA
-  image_url: http://maps.google.com/maps/api/staticmap?markers=color:red|label:B|11+S+21st+St+Philadelphia+PA&zoom=16
-  description: Street parking in a 3 or 4 block radius around that area seems pretty open around that time so hopefully it shouldn't be too hard to find a spot. SEPTA is close by, too.
+  map_query: 11 S 21st St Philadelphia PA
+  zoom: 16
 
 huntsman:
   id: 2
@@ -19,6 +18,4 @@ huntsman:
   city: Philadelphia
   state: PA
   zip: 19104
-  map_url: http://maps.google.com/maps?q=3730+Walnut+St+Philadelphia+PA
-  image_url: http://maps.google.com/maps/api/staticmap?markers=color:red|label:A|3730+Walnut+St+Philadelphia+PA&zoom=16
-  description: For map and directions go to http://www.wharton.upenn.edu/campus/philadelphia/visiting.cfm
+  map_query: 3730 Walnut St Philadelphia PA
