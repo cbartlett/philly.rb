@@ -7,7 +7,7 @@ body, #footer a {
 
 body {
   margin: 0;
-  font-family: Helvetica; /* Professional, Pragmatic, Social */
+  font-family: Helvetica;
   height: 100%;
 }
 
@@ -32,7 +32,7 @@ body {
   width: 80px;
 }
 
-#logo, #news {
+#logo, #sidebar div {
   background: #571617;
   padding: 10px 10px 8px 10px;
   border-radius: 5px;
@@ -92,18 +92,23 @@ h1 span {
   background: #72B2B4;
 }
 
-#news {
+#sidebar {
   width: 250px;
   float: right;
-  margin: 0 20px 10px 0;
+  margin: 0 20px 0 0;
 }
 
-#news > p {
+#sidebar div {
+  width: 230px;
+  margin-bottom: 10px;
+}
+
+#sidebar p {
   margin: 0;
   text-align: center;
 }
 
-#news a {
+#sidebar a {
   color: #76CACC;
   font-weight: bold;
   text-decoration: none;
@@ -136,20 +141,6 @@ h1 span {
   text-align: center;
   margin: 0;
   padding-top: 10px;
-}
-
-.ical {
-  clear: left;
-  margin: 10px 20px;
-}
-
-.ical a {
-  font-size: 14pt;
-  color: #76CACC;
-  text-decoration: none;
-  font-weight: bold;
-  padding-left: 30px;
-  background: url('ical.png') 0 0 no-repeat;
 }
 
 #content, .event, .fullWidth {
@@ -192,6 +183,8 @@ h1 span {
   border: 1px solid #72B2B4;
   display: block;
   margin: 5px auto;
+  width: 240px;
+  height: 200px;
 }
 
 #blurbs {

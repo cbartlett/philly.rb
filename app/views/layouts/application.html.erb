@@ -23,10 +23,19 @@
       <div class="clear">&nbsp;</div>
     </div>
 
-    <div id="news">
-      <ul id="twitter_update_list">
-        <li>News from <%= link_to '@philly.rb', twitter %>...</li>
-      </ul>
+	<div id="sidebar">
+      <div id="news">
+        <ul id="twitter_update_list">
+          <li>News from <%= link_to '@philly.rb', twitter %>...</li>
+        </ul>
+      </div>
+      <div id="subscribe">
+        <p>
+          <%= link_to 'Subscribe to our calendar',
+                      :controller => 'events', :format => 'ics',
+                      :protocol => 'webcal', :only_path => false %>
+        </p>
+      </div>
     </div>
     
     <div id="content">
