@@ -208,3 +208,7 @@ h1 span {
   clear: both;
   height: 0;
 }
+
+#page_jobs #content li {
+  margin-bottom: 10px;
+}
