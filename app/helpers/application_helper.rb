@@ -18,4 +18,15 @@ module ApplicationHelper
     return output
   end
 
+  def google_groups
+    'http://groups.google.com/group/phillyrb'
+  end
+
+  def twitter_name
+    'phillyrb'
+  end
+
+  def twitter
+    "http://twitter.com/#{twitter_name}"
+  end
 end

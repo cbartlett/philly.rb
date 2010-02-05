@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <b>Address 1:</b>
+  <b>Address 2:</b>
   <%=h @location.address_2 %>
 </p>
 
@@ -35,6 +35,10 @@
   <%=h @location.description %>
 </p>
 
+<p>
+  <b>Map:</b>
+  <%= link_to image_tag(@location.image_url), @location.map_url %>
+</p>
 
 <%= link_to 'Edit', edit_admin_location_path(@location) %> |
 <%= link_to 'Back', admin_locations_path %>

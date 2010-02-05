@@ -1,19 +1,21 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  address_1: MyString
-  address_1: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  description: MyText
+flannerys:
+  id: 1
+  name: T.A. Flannery's Saloon
+  address_1: 11 South 21st Street
+  address_2: (21st and Ludlow)
+  city: Philadelphia
+  state: PA
+  zip: 19103
+  map_query: 11 S 21st St Philadelphia PA
+  zoom: 16
 
-two:
-  name: MyString
-  address_1: MyString
-  address_1: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  description: MyText
+huntsman:
+  id: 2
+  name: Wharton's Huntsman Hall
+  address_1: 3730 Walnut Street
+  city: Philadelphia
+  state: PA
+  zip: 19104
+  map_query: 3730 Walnut St Philadelphia PA

@@ -2,11 +2,13 @@ production:
   protect_admin_site: true
   username: phillyrb
   password: geeksnbeers
+  gmap_key: ABQIAAAArY34WV9NiqAqdb5t6Rjb4xSuJMslPtnuZYULNWgvm9S-92hLTRSaSBMqRfSjHARzuvpMQaPV3oYccw
 beta:
   protect_admin_site: true
   username: phillyrb
   password: geeksnbeers
 development:
   protect_admin_site: false
+  gmap_key: ABQIAAAArY34WV9NiqAqdb5t6Rjb4xRh2gxfH0powUlBuQbvs63NpcAmGxQxydtt8ameHLYhbr5-s7Nx_xXfcA
 test:
   protect_admin_site: false

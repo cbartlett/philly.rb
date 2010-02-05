@@ -1,11 +1,24 @@
-<h1>Upcoming Events</h1>
 
 <% @events.each do |event| %>
 	<% div_for(event) do %>
-		<h2><%= time_range(event.starts_at, event.ends_at) %></h2>
-		<p>
-			<%= h event.location.name %><br />
-			<%= link_to(h(event.name+'...'), event_path(event)) %>
-		</p>
+    <p class="title"><%= link_to event.name, event_path(event) %></p>
+    <p><%= event.starts_at.to_s(:event) %></p>
+	<p class="address"><a href="<%=h(event.location.map_url)%>">
+		<%= h event.location.name %><br />
+		<%= h event.location.city %>, <%= h event.location.state %> <%= h event.location.zip %>
+	</a></p>
+    <%= link_to image_tag(event.location.image_url), event.location.map_url %>
 	<% end %>
+<% end %>
+
+<% if @events.empty? %>
+  <div class="fullWidth">
+    No upcoming events yet. Keep an eye on our <%= link_to 'twitter feed', twitter %> or <%= link_to 'mailing list', google_groups %> to get all the latest information.
+  </div>
+<% end %>
+
+<% content_for :back_matter do %>
+  <div id="blurbs">
+    <%= render :partial => 'page/blurb' %>
+  </div>
 <% end %>
